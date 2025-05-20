@@ -7,6 +7,27 @@ describe('Funcionalidade: Produtos', () => {
     });
 
     it('Deve selecionar um produto da lista', () => {
+        cy.get('.product-block')
+        .first()
+        .click()
+        
+    });
+
+        it('Deve selecionar um produto da lista', () => {
+        cy.get('.product-block')
+        .last()
+        .click()
+        
+    });
+
+    it('Deve selecionar um produto da lista', () => {
+        cy.get('.block-inner')
+        .eq(5)
+        .click()
+        
+    });
+
+    it('Deve selecionar um produto da lista', () => {
         cy.get('.products > .row')
         //.first()
         //.last()
@@ -14,6 +35,9 @@ describe('Funcionalidade: Produtos', () => {
         .contains('Ariel Roll Sleeve Sweatshirt')
         .click()
         
+        cy.get('#tab-title-description > a').should('contain' , 'Descrição')
     });
-    
+
+
+
 });
