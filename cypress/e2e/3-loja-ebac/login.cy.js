@@ -41,7 +41,7 @@ it('Deve fazer login com sucesso - Usando massa de dados', () => {
     cy.get('.woocommerce-MyAccount-content > :nth-child(2)').should('contain', 'Olá, lucasteste (não é lucasteste? Sair)')
 });
 
-it.only('Deve fazer login com sucesso - Usando Fixture', () => {
+it('Deve fazer login com sucesso - Usando Fixture', () => {
     cy.fixture('perfil').then( dados => {
 
         cy.get('#username').type(dados.usuario , {log: false})
